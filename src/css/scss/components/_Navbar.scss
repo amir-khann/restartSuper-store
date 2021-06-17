@@ -1,0 +1,13 @@
+.navbar {
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1vw 10vw;
+
+    h1 {
+      font-weight: lighter;
+      font-size: 2.5vw;
+    }
+  }
+}

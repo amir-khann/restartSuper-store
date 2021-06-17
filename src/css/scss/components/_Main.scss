@@ -1,0 +1,12 @@
+.main {
+  height: 100vh;
+  padding: 1vw 10vw;
+  background: linear-gradient(to right, #fc00ff, #057779);
+  display: flex;
+
+  .cards {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
