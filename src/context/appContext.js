@@ -77,10 +77,15 @@ const AppContext = ({ children }) => {
     }
   };
 
-  console.log(cartList);
+  const deleteCartItem = (id) => {
+    const amir = cartList.filter((e) => e.id !== id);
+    setCartList(amir);
+  };
+
   const exposed = {
     showCartMenu,
     toggleCart,
+    deleteCartItem,
     addToCart,
     subToCart,
     products,

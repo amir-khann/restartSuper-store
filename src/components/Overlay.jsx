@@ -28,17 +28,20 @@ const overlay = () => {
             <div className="content">
               {cartList.map((item) => (
                 <div key={item.id}>
-                  {console.log("display from overlay", item)}
                   <div className="products">
                     <p>
-                      {item.qty}X{item.title}{" "}
-                      <span onClick={() => addToCart(item)}>+</span>{" "}
+                      {item.qty}X{item.title}
+                    </p>
+                    <div>
+                      <span onClick={() => addToCart(item)}>+</span>
                       {item.qty === 1 ? (
-                        <span onClick={() => subToCart(item)}>delete</span>
+                        <span onClick={() => deleteCartItem(item.id)}>
+                          delete
+                        </span>
                       ) : (
                         <span onClick={() => subToCart(item)}>-</span>
                       )}
-                    </p>
+                    </div>
                     <p>${item.price * item.qty}</p>
                   </div>
                   <div className="line"></div>
