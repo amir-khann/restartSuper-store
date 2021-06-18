@@ -1,9 +1,9 @@
 import React from "react";
+import UseApp from "./../hooks/app";
 
 const Card = ({ product }) => {
-  console.log(product);
-  const image =
-    "https://images.unsplash.com/photo-1550615162-30dcc978d172?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fGNhcnN8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60";
+  const { addToCart } = UseApp();
+
   return (
     <div className="card">
       <h1>{product.title}</h1>
@@ -11,7 +11,7 @@ const Card = ({ product }) => {
         <img src={product.url} alt="logo" />
       </div>
       <div className="footer">
-        <button>add +</button>
+        <button onClick={() => addToCart(product)}>add +</button>
         <h1>${product.price}</h1>
       </div>
     </div>

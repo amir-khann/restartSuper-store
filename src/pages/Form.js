@@ -58,7 +58,7 @@ const Form = () => {
 
         <input
           type="text"
-          className="red"
+          // className="red"
           placeholder="title"
           name="title"
           value={values.title}
@@ -68,7 +68,7 @@ const Form = () => {
 
         <input
           type="text"
-          className="red"
+          // className="red"
           placeholder="description"
           name="description"
           value={values.description}
@@ -79,7 +79,7 @@ const Form = () => {
         ) : null}
         <input
           type="text"
-          className="red"
+          // className="red"
           placeholder="Url"
           name="url"
           value={values.url}
@@ -88,7 +88,7 @@ const Form = () => {
         {errors.url === "url is required" ? <p>{errors.url}</p> : null}
         <input
           type="text"
-          className="red"
+          // className="red"
           placeholder="Price"
           name="price"
           value={values.price}

@@ -9,5 +9,10 @@
       font-weight: lighter;
       font-size: 2.5vw;
     }
+    .icon {
+      :hover {
+        cursor: pointer;
+      }
+    }
   }
 }
