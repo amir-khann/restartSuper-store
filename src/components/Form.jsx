@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import UseApp from "./../hooks/app";
+import { useHistory } from "react-router-dom";
 const { v4: uuidv4 } = require("uuid");
 
 const Form = () => {
+  const history = useHistory();
   const { products, setProducts } = UseApp();
   const [values, setValues] = useState({
     title: "",
@@ -65,6 +67,7 @@ const Form = () => {
     localStorage.setItem("products", JSON.stringify(proarr));
     setProducts(proarr);
     console.log("all products", proarr);
+    history.push("/home");
   };
 
   return (
