@@ -26,16 +26,16 @@ const Form = () => {
     const message = {};
 
     if (valuess.title === "") {
-      message.title = "title is required";
+      message.title = "*title is required";
     }
     if (valuess.description === "") {
-      message.description = "description is required";
+      message.description = "*description is required";
     }
     if (valuess.url === "") {
-      message.url = "url is required";
+      message.url = "*url is required";
     }
     if (valuess.price === "") {
-      message.price = "price is required";
+      message.price = "*price is required";
     }
 
     return message;
@@ -82,7 +82,7 @@ const Form = () => {
             value={values.title}
             onChange={handleChange}
           />
-          {errors.title === "title is required" ? (
+          {errors.title === "*title is required" ? (
             <div className="error">{errors.title}</div>
           ) : null}
           <input
@@ -92,7 +92,7 @@ const Form = () => {
             placeholder="description"
             onChange={handleChange}
           />
-          {errors.description === "description is required" ? (
+          {errors.description === "*description is required" ? (
             <div className="error">{errors.description}</div>
           ) : null}
           <input
@@ -102,7 +102,7 @@ const Form = () => {
             placeholder="url"
             onChange={handleChange}
           />
-          {errors.url === "url is required" ? (
+          {errors.url === "*url is required" ? (
             <div className="error">{errors.url}</div>
           ) : null}
           <input

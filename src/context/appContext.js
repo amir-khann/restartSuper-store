@@ -4,6 +4,7 @@ export const Context = createContext();
 
 const AppContext = ({ children }) => {
   const [showCartMenu, setShowCartMenu] = useState(false);
+  const [showfilter, setShowfiter] = useState(false);
   const [search, setSearch] = useState("");
   const [cartList, setCartList] = useState(
     JSON.parse(localStorage.getItem("cartList")) || []
@@ -67,6 +68,8 @@ const AppContext = ({ children }) => {
     search,
     setSearch,
     deleteProduct,
+    showfilter,
+    setShowfiter,
   };
 
   return <Context.Provider value={exposed}>{children}</Context.Provider>;

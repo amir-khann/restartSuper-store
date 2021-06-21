@@ -1,14 +1,15 @@
 .home {
   .addNewProduct {
     display: flex;
-    font-size: 32px;
+    font-size: 52px;
     position: fixed;
     bottom: 20px;
     right: 80px;
-    padding: 20px 30px;
+    padding: 15px 30px;
     border: none;
     border-radius: 50%;
-    background-color: white;
+    color: #fff;
+    background-color: rgb(58, 233, 73);
     box-shadow: 0 1px 3px rgba(#000000, 0.1);
   }
 }

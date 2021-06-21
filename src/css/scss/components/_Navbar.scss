@@ -14,6 +14,12 @@
         cursor: pointer;
       }
     }
+
+    .filter {
+      padding: 6px 6px;
+      border: 1px solid grey;
+    }
+
     form {
       display: inline-flex;
     }
