@@ -61,13 +61,17 @@
       }
     }
   }
+
   span {
     background-color: rgb(47, 255, 47);
     padding: 5px 10px;
     border-radius: 3px;
     font-size: 22px;
+    font-weight: bolder;
     color: #fff;
+    margin-left: 4px;
   }
+
   .btn {
     display: flex;
     justify-content: center;

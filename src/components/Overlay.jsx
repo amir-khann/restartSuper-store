@@ -32,12 +32,10 @@ const overlay = () => {
                     <p>
                       {item.qty}X{item.title}
                     </p>
-                    <div>
+                    <div className="btndiv">
                       <span onClick={() => addToCart(item)}>+</span>
                       {item.qty === 1 ? (
-                        <span onClick={() => deleteCartItem(item.id)}>
-                          delete
-                        </span>
+                        <span onClick={() => deleteCartItem(item.id)}>X</span>
                       ) : (
                         <span onClick={() => subToCart(item)}>-</span>
                       )}
