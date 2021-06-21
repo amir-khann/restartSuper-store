@@ -12,6 +12,7 @@ const overlay = () => {
     subToCart,
     deleteCartItem,
   } = UseApp();
+  console.log(cartList);
 
   return (
     <div className={`overlay ${showCartMenu ? "show" : "hide"}`}>

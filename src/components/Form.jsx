@@ -10,6 +10,7 @@ const Form = () => {
     url: "",
     price: "",
     id: "",
+    qty: 1,
   });
 
   const [errors, setErrors] = useState({
@@ -61,6 +62,7 @@ const Form = () => {
     setValues(newobj);
     const proarr = products;
     proarr[products.length] = values;
+    localStorage.setItem("products", JSON.stringify(proarr));
     setProducts(proarr);
     console.log("all products", proarr);
   };
