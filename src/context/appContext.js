@@ -49,6 +49,12 @@ const AppContext = ({ children }) => {
     setCartList(amir);
   };
 
+  const deleteProduct = (product) => {
+    const newlistOfproduct = products.filter((val) => val.id !== product.id);
+    setProducts(newlistOfproduct);
+    localStorage.setItem("products", JSON.stringify(newlistOfproduct));
+  };
+
   const exposed = {
     showCartMenu,
     toggleCart,
@@ -60,6 +66,7 @@ const AppContext = ({ children }) => {
     cartList,
     search,
     setSearch,
+    deleteProduct,
   };
 
   return <Context.Provider value={exposed}>{children}</Context.Provider>;

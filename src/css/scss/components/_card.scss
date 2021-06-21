@@ -12,6 +12,15 @@
   flex-direction: column;
   justify-content: space-between;
 
+  .header {
+    display: flex;
+    justify-content: space-between;
+
+    :hover {
+      cursor: pointer;
+    }
+  }
+
   h1 {
     font-size: 2vw;
   }
