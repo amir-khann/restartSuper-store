@@ -1,5 +1,5 @@
-.navbar {
-  nav {
+.navbar1 {
+  .nav1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -19,9 +19,52 @@
       padding: 6px 6px;
       border: 1px solid grey;
     }
-
-    form {
+    .filter:hover {
+      cursor: pointer;
+    }
+    .form {
       display: inline-flex;
     }
   }
+  .model {
+    width: 200px;
+    height: 200px;
+    background-color: hotpink;
+    z-index: 5;
+  }
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  padding: 12px 16px;
+  z-index: 1;
+
+  div:hover {
+    cursor: pointer;
+  }
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.modal-body {
+  // z-index: 3;
+  cursor: pointer;
+
+  button {
+    border-radius: 15px;
+  }
+}
+.modal-dialog {
+  display: flex;
+  align-items: center;
+  height: 100vh;
 }

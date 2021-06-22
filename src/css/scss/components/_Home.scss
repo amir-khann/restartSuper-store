@@ -3,13 +3,15 @@
     display: flex;
     font-size: 52px;
     position: fixed;
+    align-items: center;
     bottom: 20px;
     right: 80px;
-    padding: 15px 30px;
+    padding: 10px 30px;
     border: none;
     border-radius: 50%;
     color: #fff;
     background-color: rgb(58, 233, 73);
     box-shadow: 0 1px 3px rgba(#000000, 0.1);
+    z-index: 4;
   }
 }

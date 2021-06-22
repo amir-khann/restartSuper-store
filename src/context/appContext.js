@@ -1,17 +1,18 @@
 import React, { createContext, useState } from "react";
-
 export const Context = createContext();
 
 const AppContext = ({ children }) => {
   const [showCartMenu, setShowCartMenu] = useState(false);
   const [showfilter, setShowfiter] = useState(false);
   const [search, setSearch] = useState("");
+  const [filterByPrice, setFilterByPrice] = useState([]);
   const [cartList, setCartList] = useState(
     JSON.parse(localStorage.getItem("cartList")) || []
   );
   const [products, setProducts] = useState(
     JSON.parse(localStorage.getItem("products")) || []
   );
+
   console.log("context products", products);
   const toggleCart = () => {
     setShowCartMenu(!showCartMenu);
@@ -56,6 +57,14 @@ const AppContext = ({ children }) => {
     localStorage.setItem("products", JSON.stringify(newlistOfproduct));
   };
 
+  function filterFun(low, heigh) {
+    const imaginary = products;
+    const newProduct = imaginary.filter(
+      (item) => item.price > low && item.price < heigh
+    );
+    setFilterByPrice(newProduct);
+  }
+
   const exposed = {
     showCartMenu,
     toggleCart,
@@ -70,6 +79,9 @@ const AppContext = ({ children }) => {
     deleteProduct,
     showfilter,
     setShowfiter,
+    setFilterByPrice,
+    filterByPrice,
+    filterFun,
   };
 
   return <Context.Provider value={exposed}>{children}</Context.Provider>;
