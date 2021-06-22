@@ -10,8 +10,7 @@ import "bootstrap/dist/js/bootstrap.min.js";
 import { Button } from "bootstrap";
 
 const Navbar = () => {
-  const { toggleCart, setSearch, search, setShowfiter, showfilter, filterFun } =
-    UseApp();
+  const { toggleCart, setSearch, search, resetFilter, filterFun } = UseApp();
 
   return (
     <div className="navbar1">
@@ -26,7 +25,7 @@ const Navbar = () => {
           />
           <button
             type="button"
-            className="btn btn-primary  ml-3"
+            className="btn btn-success  ml-3"
             data-toggle="modal"
             data-target="#exampleModal"
           >
@@ -89,6 +88,12 @@ const Navbar = () => {
               </div>
             </div>
           </div>
+          <button
+            className="btn btn-success ml-3"
+            onClick={() => resetFilter()}
+          >
+            reset
+          </button>
         </div>
 
         <div className="icon" onClick={() => toggleCart()}>

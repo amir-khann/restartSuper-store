@@ -3,7 +3,7 @@ export const Context = createContext();
 
 const AppContext = ({ children }) => {
   const [showCartMenu, setShowCartMenu] = useState(false);
-  const [showfilter, setShowfiter] = useState(false);
+
   const [search, setSearch] = useState("");
   const [filterByPrice, setFilterByPrice] = useState([]);
   const [cartList, setCartList] = useState(
@@ -64,6 +64,9 @@ const AppContext = ({ children }) => {
     );
     setFilterByPrice(newProduct);
   }
+  function resetFilter() {
+    setFilterByPrice([]);
+  }
 
   const exposed = {
     showCartMenu,
@@ -77,11 +80,11 @@ const AppContext = ({ children }) => {
     search,
     setSearch,
     deleteProduct,
-    showfilter,
-    setShowfiter,
+
     setFilterByPrice,
     filterByPrice,
     filterFun,
+    resetFilter,
   };
 
   return <Context.Provider value={exposed}>{children}</Context.Provider>;

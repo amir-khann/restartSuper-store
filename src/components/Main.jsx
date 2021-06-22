@@ -3,8 +3,7 @@ import Card from "./Card";
 import UseApp from "./../hooks/app";
 
 const Main = () => {
-  const { products, search, showfilter, setFilterByPrice, filterByPrice } =
-    UseApp();
+  const { products, search, filterByPrice } = UseApp();
   const [filterItem, setfilteredItem] = useState([]);
 
   useEffect(() => {
@@ -14,12 +13,6 @@ const Main = () => {
       )
     );
   }, [search]);
-
-  // useEffect(() => {
-  //   setFilterByPrice(
-  //     products.filter((item) => item.price > 1 && item.price < 100)
-  //   );
-  // }, [search, products]);
 
   return (
     <div className="main">
