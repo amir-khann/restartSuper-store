@@ -15,14 +15,15 @@ const Card = ({ product }) => {
             <AiOutlineDelete size="2em" />
           </div>
         </div>
+        <Link to={`productDetail/:${product.id}`}></Link>
         <div className="image">
           <img src={product.url} alt="logo" />
         </div>
-        <div className="footer">
-          <button onClick={() => addToCart(product)}>add +</button>
-          <h1>${product.price}</h1>
-        </div>
       </Link>
+      <div className="footer">
+        <button onClick={() => addToCart(product)}>add +</button>
+        <h1>${product.price}</h1>
+      </div>
     </div>
   );
 };

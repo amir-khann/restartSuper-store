@@ -66,21 +66,21 @@ const Navbar = () => {
                   <button
                     className="btn btn-success m-3"
                     data-dismiss="modal"
-                    onClick={() => filterFun(0, 100)}
+                    onClick={() => filterFun(101, 200)}
                   >
                     100 to 200
                   </button>
                   <button
                     className="btn btn-success m-3"
                     data-dismiss="modal"
-                    onClick={() => filterFun(100, 200)}
+                    onClick={() => filterFun(201, 300)}
                   >
                     200 to 300
                   </button>
                   <button
                     className="btn btn-success m-3"
                     data-dismiss="modal"
-                    onClick={() => filterFun(200, 300)}
+                    onClick={() => filterFun(301, 400)}
                   >
                     300 to 400
                   </button>
